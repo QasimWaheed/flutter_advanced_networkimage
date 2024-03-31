@@ -11,10 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  http: ^0.13.6 #Null safety
+  http: ^0.13.6
   path_provider: ^2.1.2
   path: ^1.9.0
-  flutter_svg: ^2.0.10+1
+  flutter_svg: ^2.0.9
   pool: ^1.5.1
   async: ^2.11.0
 
