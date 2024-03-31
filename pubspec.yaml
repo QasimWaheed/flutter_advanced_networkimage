@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  http: ^1.2.1 #Null safety
+  http: ^0.13.6 #Null safety
   path_provider: ^2.1.2
   path: ^1.9.0
   flutter_svg: ^2.0.10+1
