@@ -1,6 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
-import 'dart:ui' as ui show hashValues;
 
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
@@ -156,7 +154,7 @@ class AdvancedNetworkSvg extends SvgLoader {
   Future<ImageInfo> decode(
       Uint8List? imageData, ColorFilter? colorFilter, String keyString,
       {ImageErrorListener? onError}) async {
-    var buffer = await ImmutableBuffer.fromUint8List(imageData!);
+    // var buffer = await ImmutableBuffer.fromUint8List(imageData!);
     if (onError != null)
       return decode(imageData, colorFilter, keyString)..catchError(onError);
     return decode(imageData, colorFilter, keyString);

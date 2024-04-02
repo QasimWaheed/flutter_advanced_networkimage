@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:async';
-import 'dart:typed_data';
-import 'dart:ui' as ui show Codec, hashValues, TargetImageSize;
+import 'dart:ui' as ui show Codec, TargetImageSize;
 
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';

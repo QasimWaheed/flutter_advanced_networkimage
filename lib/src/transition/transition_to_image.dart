@@ -310,7 +310,7 @@ class _TransitionToImageState extends State<TransitionToImage>
     });
   }
 
-  Future<void> _getImage({bool reload: false}) async {
+  Future<void> _getImage({bool reload = false}) async {
     if (reload) {
       if (widget.printError) print('Reloading image.');
 

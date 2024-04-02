@@ -15,7 +15,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<StatefulWidget> createState() => Example();
@@ -56,7 +56,7 @@ class Example extends State<MyApp> {
 }
 
 class LoadImage extends StatelessWidget {
-  const LoadImage({required this.url, required this.svgUrl, Key? key}) : super(key: key);
+  const LoadImage({required this.url, required this.svgUrl, super.key});
 
   final String url;
   final String svgUrl;
@@ -112,7 +112,7 @@ class LoadImage extends StatelessWidget {
 }
 
 class ZoomableImage extends StatelessWidget {
-  const ZoomableImage({required this.url, Key? key}) : super(key: key);
+  const ZoomableImage({required this.url, super.key});
 
   final String url;
 
@@ -130,7 +130,7 @@ class ZoomableImage extends StatelessWidget {
 }
 
 class ZoomableImages extends StatelessWidget {
-  const ZoomableImages({required this.url, Key? key}) : super(key: key);
+  const ZoomableImages({required this.url, super.key});
 
   final String url;
 

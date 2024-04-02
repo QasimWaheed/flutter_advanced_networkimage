@@ -1,6 +1,5 @@
 # Flutter Advanced Network Image Provider 2
 
-fork from https://pub.dev/packages/flutter_advanced_networkimage
 migrate to null safety
  
 
