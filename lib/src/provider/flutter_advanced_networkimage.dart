@@ -112,6 +112,7 @@ class AdvancedNetworkImage extends ImageProvider<AdvancedNetworkImage> {
 
   @override
   Future<AdvancedNetworkImage> obtainKey(ImageConfiguration configuration) {
+    print("2222 :: ${this.toString()}");
     return SynchronousFuture<AdvancedNetworkImage>(this);
   }
 
@@ -132,13 +133,12 @@ class AdvancedNetworkImage extends ImageProvider<AdvancedNetworkImage> {
     }
     return false;
   }
-
-  ImageStreamCompleter load(AdvancedNetworkImage key, ImageDecoderCallback decode) {
+  @override
+  ImageStreamCompleter loadImage(AdvancedNetworkImage key, ImageDecoderCallback decode) {
     final chunkEvents = StreamController<ImageChunkEvent>();
-
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key, decode, chunkEvents),
-      // chunkEvents: chunkEvents.stream, // TODO
+      chunkEvents: chunkEvents.stream,
       scale: key.scale,
       informationCollector: () sync* {
         yield DiagnosticsProperty<ImageProvider>('Image provider', this);
@@ -153,7 +153,6 @@ class AdvancedNetworkImage extends ImageProvider<AdvancedNetworkImage> {
     StreamController<ImageChunkEvent> chunkEvents,
   ) async {
     assert(key == this);
-
     if (useDiskCache) {
       try {
         Uint8List? _diskCache = await loadFromDiskCache();
