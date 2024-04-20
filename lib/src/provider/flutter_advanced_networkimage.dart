@@ -112,7 +112,6 @@ class AdvancedNetworkImage extends ImageProvider<AdvancedNetworkImage> {
 
   @override
   Future<AdvancedNetworkImage> obtainKey(ImageConfiguration configuration) {
-    print("2222 :: ${this.toString()}");
     return SynchronousFuture<AdvancedNetworkImage>(this);
   }
 
